@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Provider.Domain.Entities
 {
-    class BaseEntity
+    public abstract class BaseEntity
     {
+        public Guid Id { get; protected set; }
+        public bool Active { get; protected set; }
     }
 }
