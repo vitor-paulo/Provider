@@ -1,8 +1,7 @@
 ﻿using Provider.Domain.Entities;
+using Provider.Domain.Interfaces;
+using Provider.Infra.Context;
 using Provider.Infra.Repositories.GenericRepository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Provider.Infra.Repositories.CompanyRepository
 {
