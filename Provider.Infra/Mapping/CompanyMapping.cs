@@ -9,7 +9,6 @@ namespace Provider.Infra.Mapping
         public void Configure(EntityTypeBuilder<Company> builder)
         {
             builder.Property(x => x.FantasyName)
-                .HasMaxLength(128)
                 .IsRequired();
 
             builder.Property(x => x.CNPJ)

@@ -34,12 +34,13 @@ namespace Provider.Application.Services.CompanyService
         {
             var company = await _companyRepository.GetAll();
 
-            return company.Select(d => new CompanyResponseDTO()
+            return company.Select(c => new CompanyResponseDTO()
             {
-                Active = d.Active,
-                Id = d.Id,
-                FantasyName = d.FantasyName,
-                CNPJ = d.CNPJ
+                Active = c.Active,
+                Id = c.Id,
+                FantasyName = c.FantasyName,
+                CNPJ = c.CNPJ, 
+                UF = c.UF
             }).ToList();
         }
 
@@ -51,7 +52,8 @@ namespace Provider.Application.Services.CompanyService
                 Active = company.Active,
                 Id = company.Id,
                 FantasyName = company.FantasyName,
-                CNPJ = company.CNPJ
+                CNPJ = company.CNPJ,
+                UF = company.UF.ToString()
             };
         }
 

@@ -19,8 +19,8 @@ namespace Provider.Infra.Repositories.GenericRepository
 
         public async Task Create(TEntity entity)
         {
-            await _dbContext.Set<TEntity>()
-                .AddAsync(entity);
+            await _dbContext.Set<TEntity>().AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task Delete(Guid id)
