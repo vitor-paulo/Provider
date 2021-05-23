@@ -59,7 +59,7 @@ namespace Provider.Test.Unit.Application.Services
                 Active = true,
                 UF = "SC"
             };
-            var usuario = new CompanyBuilder()
+            var comapny = new CompanyBuilder()
                 .WithFantasyName("Banco")
                 .WithCNPJ("00.000.000/0001-91")
                 .WihtUF("SC")
@@ -68,7 +68,7 @@ namespace Provider.Test.Unit.Application.Services
 
             _companyRepository
                 .GetById(companyId)
-                .Returns(usuario);
+                .Returns(comapny);
 
             //action
             await _companyService
@@ -142,7 +142,7 @@ namespace Provider.Test.Unit.Application.Services
         }
 
         [Fact]
-        public async Task Deve_retornar_todos_os_usuarios()
+        public async Task Must_Return_All_Companies()
         {
             //arrange
             var companyId1 = Guid.NewGuid();
