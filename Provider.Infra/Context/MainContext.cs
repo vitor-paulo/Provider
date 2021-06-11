@@ -23,7 +23,7 @@ namespace Provider.Infra.Context
             {
                 optionsBuilder
                     .UseLazyLoadingProxies()
-                    .UseSqlServer("DefaultConnection");
+                    .UseNpgsql("DefaultConnection");
             }
         }
     }

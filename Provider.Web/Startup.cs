@@ -27,7 +27,7 @@ namespace Provider.Web
             services.AddRazorPages();
             services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
-            services.AddDbContext<MainContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ProviderConnectionString")));
+            services.AddDbContext<MainContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("ProviderConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
